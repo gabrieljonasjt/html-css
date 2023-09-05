@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-image: url(img/wallpaper006.jpg);
+        }
+        div.quadrado{
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+        }
+        div#d1{
+            background-color: aqua;
+        }
+        div#d2{
+            background-image: linear-gradient(to bottom, rgb(25, 0, 255), rgb(183, 183, 241));
+        }
+        div#d3{
+            background-image: url(img/pattern001.png);            
+        }
+        div#d2:hover{
+            background-image: url(img/wallpaper003.jpg);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="quadrado" id="d1"></div>
+    <div class="quadrado" id="d2"></div>
+    <div class="quadrado" id="d3"></div>
 </body>
 </html>
