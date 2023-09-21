@@ -7,10 +7,21 @@
     <style>
         body{
             height: 100vh;
-            background-color: black;    
-            background-image: url(img/wallpaper002.jpg); 
-            background-position: center top;   
-            background-repeat: no-repeat;
+            /*
+            Shorthand - background
+
+                background-color: black;    
+                background-image: url(img/wallpaper002.jpg); 
+                background-position: center top;   
+                background-repeat: no-repeat;
+                background-size: cover; (para que a imgagem cubra toda a tela, mesmo que seja necessário fazer alguns cortes)
+                background-attachment: fixed; (para o fundo ficar fixo)
+
+                color > image > position > repeat > size(não estava funcionando apesar de estar na norma da w3c) > attachment
+
+                
+            */
+            background: black url(img/wallpaper002.jpg) center top no-repeat fixed;
             background-size: cover;
         }
         main{
