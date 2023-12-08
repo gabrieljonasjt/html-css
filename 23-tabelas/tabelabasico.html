@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            height: 300px;
+            position: relative;/*necessario para o cabeçário fixo*/
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            color: white;
+            background-color: black;
+        }
+        thead > tr > th{
+            position: sticky; /*para fixar o título*/
+            top: -1px;/*fixar na posição 0, coloquei -1px pq tinha um espaço indesejado antes*/
+            background-color: rgb(39, 39, 39);
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center; /*alinhamento horizontal*/
+            vertical-align: bottom;/*alinhamento vertical*/
+        }
+        th{
+            background-color: rgb(39, 39, 39);
+            color: white;
+            border-color: white;
+            
+        }
+        tbody > tr:nth-child(even){
+            background-color: beige;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: white;
+        }
+        /*toda linha de número que par ou impar vai receber as configurações que estão aqui ^^^ em cima.
+        *even = par = 2n
+        *odd = ímpar = 2n-1
+         */
+        tr.especial{
+            background-color: aqua;
+        }
+        td#dif{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>População das Unidades</caption><!--legenda da tabela-->
+        <thead>
+            <tr>
+                <th scope="col">País</th><!--célula do cabeçário, vem com configurações pré definidas-->
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="especial">
+                <td id="dif">A1</td>
+                <td>B1</td>
+            </tr>
+            <tr><!--linha-->
+                <td>Brasil</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>Argentina</td><!--coluna-->
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>Alemanha</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Uruguai</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Venezuela</td>
+                <td>900</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <th>6000</th>
+            </tr>
+        </tfoot>
+        <!--
+            scope
+            -col = título de coluna
+            -row = título de linha
+
+            *ajuda os mecanismos de busca do google*
+        -->
+    </table>
+</body>
+</html>
